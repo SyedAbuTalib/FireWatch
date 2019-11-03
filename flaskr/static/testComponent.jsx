@@ -1,10 +1,10 @@
-var realPython = React.createClass({
-  render: function() {
+class testComponent extends React.Component{
+  render() {
     return (<h2>Greetings, from Real Python!</h2>);
   }
-});
+}
 
 ReactDOM.render(
-  React.createElement(realPython, null),
+  React.createElement(testComponent, null),
   document.getElementById('content')
 );

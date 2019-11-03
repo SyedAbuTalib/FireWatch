@@ -1,14 +1,97 @@
 <!doctype html>
 <html>
-<head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.js"></script>
+   <head>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+      <link rel="stylesheet" type="text/css" href="{{url_for('static', filename="base.css")}}" />
+      <script src="{{url_for('static', filename='mapFunctions.js') }}"></script>
+      <!-- Required styles for MDC Web -->
+      <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
 
-</head>
-<body>
-<h1>Test page</h1>
-<div id="content"></div>
-<script src="{{url_for('static',filename='testComponent.jsx')}}" type="text/babel"></script>
-</body>
+      <!-- Required MDC Web JavaScript library -->
+      <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      <!-- Instantiate single textfield component rendered in the document -->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+ <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            
+
+   </head>
+
+
+
+
+    
+   <body>
+
+     <div id="map" style="width:100%;height:862px; position:absolute; left: 0px; top: 65px;"></div>
+        <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrJE8zbTLsZW46ztGQSzw29XeVLI6zAiQ&libraries=visualization&callback=initMap"></script>
+   
+
+     <nav>
+    <div class="nav-wrapper">
+
+    
+      <a href="#" class="brand-logo"> Firewatch</a>
+      <form action="#" id="zipform" onsubmit="codeAddress(); return false">
+        <div class="input-field right" >
+          <input type="search" name="ZipCode" id="ZipCode" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+      
+    </div>
+  </nav>
+
+
+<div id="wow">
+</div>
+
+  <!---   <header class="mdc-top-app-bar mdc-elevation--z3 mdc-elevation-transition">
+      <div class="mdc-top-app-bar__row mdc-elevation--z3 mdc-elevation-transition">
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+          <span class="mdc-top-app-bar__title">Firewatch</span> </section>
+        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+
+          <div class="mdc-text-field">
+            <form action="#" id="zipform" onsubmit="codeAddress(); return false">
+              <input type="text" name="ZipCode" id="ZipCode" class="mdc-text-field__input">
+              <div class="mdc-line-ripple"></div>
+            </form>
+          </div>
+
+          <button class="mdc-icon-button material-icons mdc-top-app-bar__action-item--unbounded" disabled aria-label="Search">search</button>
+          
+        </section>
+      </div>
+
+    </header>
+    -->
+     
+
+
+
+      <!--
+             <h1 style="font-size: 60px">Disaster Watch ON GO</h1>
+            <form action="#" id="zipform" onsubmit="codeAddress(); return false">
+               <h2>Search Location here</h2>
+               <input type="text" name="ZipCode" id="ZipCode">
+            </form>
+         <div id="map" style="width:100%;height:690px"></div>
+      <script async defer
+         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrJE8zbTLsZW46ztGQSzw29XeVLI6zAiQ&libraries=visualization&callback=initMap"></script>
+        -->
+      
+
+
+
+   </body>
 </html>

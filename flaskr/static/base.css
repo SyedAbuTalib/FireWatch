@@ -1,0 +1,53 @@
+:root {
+    --mdc-theme-primary: #fcb8ab;
+    --mdc-theme-secondary: #feeae6;
+    --mdc-theme-on-primary: #fff;
+    --mdc-theme-on-secondary: #fff;
+}
+
+body {
+    margin: 0px;
+}
+
+.nav-wrapper {
+    background-color: #d36a2d;
+}
+
+.brand-logo {
+    margin-left: 10px;
+}
+
+.twitter-tweet {
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+
+/* 
+
+​ body {
+    display: flex;
+}
+
+​ .mdc-drawer-app-content {
+    flex: auto;
+    overflow: auto;
+    position: relative;
+}
+
+​ .main-content {
+    overflow: auto;
+    height: 100%;
+}
+
+​ .app-bar {
+    position: absolute;
+}
+
+​ header {
+    padding: 0px;
+}
+
+.mdc-top-app-bar__row {
+    background-color: #d36a2d;
+} */
