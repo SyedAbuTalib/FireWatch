@@ -580,6 +580,7 @@ function codeAddress() {
 
 
             $.get("/analysis/" + loc[0] + "/" + loc[1], function(data) {
+                console.log(data)
                 var linksAndGeoAndHeatMap = data.split("|||000|||");
                 var links = linksAndGeoAndHeatMap[0].split("|||");
                 var lats = linksAndGeoAndHeatMap[1].split("|||");
@@ -589,7 +590,7 @@ function codeAddress() {
                 var weightsHeatMap = linksAndGeoAndHeatMap[5].split("|||")
                 var heatMapData = []
                 for (i = 0; i < latsHeatMap.length; i++) {
-                    heatMapData.push({ location: new google.maps.LatLng(parseFloat(latsHeatMap[i]), parseFloat(lngsHeatMap[i])), weight: parseFloat(weightsHeatMap[i]) / 80 });
+                    heatMapData.push({ location: new google.maps.LatLng(parseFloat(latsHeatMap[i]), parseFloat(lngsHeatMap[i])), weight: parseFloat(weightsHeatMap[i]) / 1 });
 
                 }
 
@@ -604,7 +605,7 @@ function codeAddress() {
 
 
 
-                for (var i = 0; i < 4; i++) {
+                for (var i = 0; i < 2; i++) {
                     $("#wow").append('<blockquote class="twitter-tweet"><p lang="en" dir="ltr"></p><a href=' + links[i] + '></a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>');
                 }
 
@@ -617,7 +618,7 @@ function codeAddress() {
                         animation: google.maps.Animation.DROP
 
                     });
-                    if (i < 4) {
+                    if (i < 2) {
                         marker.setLabel("" + (i + 1));
                     }
                     markerArray.push(marker);
