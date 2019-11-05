@@ -1,5 +1,7 @@
 # FireWatch - HackTX 2019
 
+![Firewatch Screenshot](https://raw.githubusercontent.com/SyedAbutalib/FireWatch/master/Firewatch-screenshot.png)
+
 ## Inspiration
 In a disaster, the most important piece of information that doesn't reach the masses is how little time they have to get out safely. We are unable to pool in information from the affected communities and this often underestimates the gravity of the situation. We wanted to build a tool to support the most vulnerable, connect affected parts and increase the accessibility of emergency services to areas at risk.
 
