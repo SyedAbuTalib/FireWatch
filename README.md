@@ -1,4 +1,4 @@
-# FireWatch - HackTX 2019
+# FireWatch - HackTX 2019 - 3rd Place
 
 ![Firewatch Screenshot](https://raw.githubusercontent.com/SyedAbutalib/FireWatch/master/Firewatch-screenshot.png)
 
